@@ -1,0 +1,133 @@
+.table__setting {
+  display: flex;
+}
+
+.payment {
+  margin-right: 84px;
+}
+
+.payment__title{
+  text-align: center;
+  margin-bottom: 40px;
+  padding-top: 25px;
+}
+
+.payment__coin {
+  display: flex;
+  align-items: center;
+  background-color: var(--coin-box);
+  padding: 10px 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.payment__coin__list {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.payment__coin__item span {
+  font-size: var(--text-label);
+}
+
+.payment__coin__remains::after {
+  content: "/";
+}
+
+.payment__bet__available,
+.payment__bet__warning {
+  margin-bottom: 20px;
+}
+
+.payment__available__label,
+.payment__available__current {
+  font-size: var(--text-label);
+}
+
+.payment__available__label::after {
+  content: ":";
+}
+
+.payment__bet__range {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.text__input {
+  width: 120px;
+  text-align: right;
+  padding: 10px 10px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 2px 0 0 rgba(255, 255, 255, 0.3), inset 0 2px 3px 0 rgba(0, 0, 0, 0.43);
+  font-size: var(--text-number);
+  font-family: "Roboto", sans-serif;
+}
+
+.range__input {
+  -webkit-appearance: none;
+  width: 280px;
+  height: 8px;
+  border-radius: 10px;
+  box-shadow: 0 2px 0 0 rgba(255, 255, 255, 0.19),inset 0 2px 1px 0 rgba(0, 0, 0, 0.78);
+  background-color: rgba(255, 255, 255, 0.102);
+  outline: none;
+  cursor: pointer;
+}
+
+.range__input::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  cursor: pointer;
+  background-image: url("../../icons/range.png");
+  background-size: cover;
+  background-position: center;
+  width: 53px;
+  height: 53px;
+}
+
+.payment__bet__button{
+  border: none;
+  background: transparent;
+}
+
+.payment__bet__icon {
+  fill: var(--main-color);
+  width: 20px;
+  vertical-align: middle;
+}
+
+.payment__bet__warning {
+  font-size: var(--text-description);
+}
+
+.payment__bet__manage {
+  margin-bottom: 30px;
+}
+
+.payment__bet__options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment__bet__option {
+  flex-basis: 100%;
+}
+
+.payment__bet__option:not(:last-child) {
+  margin-right: 10px;
+}
+
+.payment__bet__option button {
+  border-radius: 13px;
+  border: none;
+  font-size: var(--text-button);
+  width: 100%;
+  padding: 12px 0;
+}
+
+.options {
+  padding-top: 40px;
+}

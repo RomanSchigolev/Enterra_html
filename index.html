@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./styles/main.css">
+  <title>Document</title>
+</head>
+<body>
+<div class="hero">
+  <div class="container">
+    <form class="table">
+      <div class="table__setting">
+        <div class="payment">
+          <h1 class="payment__title">Входной взнос</h1>
+          <div class="payment__coin">
+            <img src="./icons/coin.png" alt="logo coin">
+            <ul class="payment__coin__list">
+              <li class="payment__coin__item">
+                <span class="payment__coin__remains">5</span>
+                <span class=payment__coin__max">10</span>
+              </li>
+              <li class="payment__coin__item">
+                <span class="payment__coins__title">ФЛ Холдем</span>
+              </li>
+            </ul>
+          </div>
+          <div class="payment__bet">
+            <div class="payment__bet__available">
+              <span class="payment__available__label">Доступно средств</span>
+              <span class="payment__available__current">2609</span>
+            </div>
+            <div class="payment__bet__range">
+              <input type="text" class="text__input" name="text__payment" id="text__payment" max="15000" value="10"
+                     onchange="range__payment.value = text__payment.value"/>
+              <button type="button" class="payment__bet__button payment__bet__button--minus">
+                <svg class="payment__bet__icon payment__bet__icon--minus" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                     y="0px"
+                     viewBox="0 0 341.333 341.333" style="enable-background:new 0 0 341.333 341.333;"
+                     xml:space="preserve">
+                  <rect y="149.333" width="341.333" height="60"/>
+                </svg>
+              </button>
+              <input type="range" class="range__input" name="range__payment" id="range__payment"
+                     oninput="text__payment.value = range__payment.value" min="0" max="15000" value="10" step="1"
+                     onchange="text__payment.value = range__payment.value">
+              <button type="button" class="payment__bet__button payment__bet__button--plus">
+                <svg class="payment__bet__icon payment__bet__icon--plus" viewBox="0 0 448 448" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m272 184c-4.417969 0-8-3.582031-8-8v-176h-80v176c0 4.417969-3.582031 8-8 8h-176v80h176c4.417969 0 8 3.582031 8 8v176h80v-176c0-4.417969 3.582031-8 8-8h176v-80zm0 0"/>
+                </svg>
+              </button>
+            </div>
+            <div class="payment__bet__manage">
+              <ul class="payment__bet__options">
+                <li class="payment__bet__option">
+                  <button type="button">Min</button>
+                </li>
+                <li class="payment__bet__option">
+                  <button type="button">Max</button>
+                </li>
+                <li class="payment__bet__option">
+                  <button type="button">Bank</button>
+                </li>
+                <li class="payment__bet__option">
+                  <button type="button">1/2 Bank</button>
+                </li>
+              </ul>
+            </div>
+            <div class="payment__bet__warning">
+              <p>Ваш входной взнос не может быть меньше суммы, с которой вы покинули данный стол. Нажмите кнопку ОК,
+                чтобы продолжить, или подождите, когда пройдет время ограничения.</p>
+            </div>
+          </div>
+        </div>
+        <div class="options">
+          <h2>table__payment</h2>
+          <p>Я хочу пользоваться функцией автоматической докупки и понимаю, что она будет автоматически пополнять мой
+            счет для обеспечения заданого номера стека.</p>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

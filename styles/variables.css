@@ -1,0 +1,12 @@
+:root {
+  --main-color: #ffffff;
+  --body-color: #000000;
+  --container-color: #454545;
+  --coin-box: #2a2a2a;
+
+  --text-description: 20px;
+  --text-button: 24px;
+  --text-label: 22px;
+  --text-number: 24px;
+  --text-title: 24px;
+}

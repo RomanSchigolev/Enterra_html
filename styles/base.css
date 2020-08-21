@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--main-color);
+  background-color: var(--body-color);
+}
+
+ul, li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  width: 1136px;
+  height: 640px;
+  padding: 0 75px 30px 65px;
+  position: absolute;
+  top: calc(50% - 320px);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: var(--container-color);
+}

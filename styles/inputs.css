@@ -34,3 +34,25 @@
   width: 53px;
   height: 53px;
 }
+
+.range__input::-moz-range-thumb {
+  cursor: pointer;
+  background-image: url("../icons/range.png");
+  background-size: cover;
+  background-position: center;
+  width: 53px;
+  height: 53px;
+  background-color: transparent;
+  border: none;
+}
+
+.range__input::-ms-thumb {
+  cursor: pointer;
+  background-image: url("../icons/range.png");
+  background-size: cover;
+  background-position: center;
+  width: 53px;
+  height: 53px;
+  background-color: transparent;
+  border: none;
+}

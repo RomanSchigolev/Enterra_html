@@ -1,15 +1,12 @@
-.table__setting {
-  display: flex;
-}
-
 .payment {
-  margin-right: 84px;
+  margin-right: 42px;
 }
 
-.payment__title{
+.payment__title {
   text-align: center;
   margin-bottom: 40px;
   padding-top: 25px;
+  font-weight: normal;
 }
 
 .payment__coin {
@@ -56,50 +53,14 @@
   margin-bottom: 30px;
 }
 
-.text__input {
-  width: 120px;
-  text-align: right;
-  padding: 10px 10px;
-  border-radius: 8px;
-  border: none;
-  box-shadow: 0 2px 0 0 rgba(255, 255, 255, 0.3), inset 0 2px 3px 0 rgba(0, 0, 0, 0.43);
-  font-size: var(--text-number);
-  font-family: "Roboto", sans-serif;
-}
-
-.range__input {
-  -webkit-appearance: none;
-  width: 280px;
-  height: 8px;
-  border-radius: 10px;
-  box-shadow: 0 2px 0 0 rgba(255, 255, 255, 0.19),inset 0 2px 1px 0 rgba(0, 0, 0, 0.78);
-  background-color: rgba(255, 255, 255, 0.102);
-  outline: none;
-  cursor: pointer;
-}
-
-.range__input::-webkit-slider-thumb{
-  -webkit-appearance: none;
-  cursor: pointer;
-  background-image: url("../../icons/range.png");
-  background-size: cover;
-  background-position: center;
-  width: 53px;
-  height: 53px;
-}
-
-.payment__bet__button{
-  border: none;
-  background: transparent;
-}
-
 .payment__bet__icon {
   fill: var(--main-color);
   width: 20px;
   vertical-align: middle;
 }
 
-.payment__bet__warning {
+.payment__bet__warning,
+.options__warning {
   font-size: var(--text-description);
 }
 
@@ -120,14 +81,10 @@
   margin-right: 10px;
 }
 
-.payment__bet__option button {
-  border-radius: 13px;
-  border: none;
-  font-size: var(--text-button);
-  width: 100%;
-  padding: 12px 0;
-}
-
-.options {
-  padding-top: 40px;
+.payment__quick__icon {
+  background-image: url(../../icons/quick_arrows.png);
+  width: 21px;
+  height: 23px;
+  display: inline-block;
+  background-repeat: no-repeat;
 }

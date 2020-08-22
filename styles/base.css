@@ -16,22 +16,24 @@ ul, li {
 
 button {
   cursor: pointer;
+  border: none;
+  font-family: "Roboto", sans-serif;
 }
 
 .hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .container{
   width: 1136px;
-  height: 640px;
-  padding: 0 75px 30px 65px;
-  position: absolute;
-  top: calc(50% - 320px);
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+  padding: 0 60px 30px;
   background-color: var(--container-color);
+}
+
+.form__setting {
+  display: flex;
+  margin-bottom: 40px;
 }

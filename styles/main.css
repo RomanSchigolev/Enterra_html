@@ -2,4 +2,7 @@
 @import "variables.css";
 @import "base.css";
 
-@import "blocks/table.css";
+@import "blocks/payment.css";
+@import "blocks/options.css";
+@import "buttons.css";
+@import "inputs.css";

@@ -11,8 +11,8 @@
 <body>
 <div class="hero">
   <div class="container">
-    <form class="table">
-      <div class="table__setting">
+    <form class="form">
+      <div class="form__setting">
         <div class="payment">
           <h1 class="payment__title">Входной взнос</h1>
           <div class="payment__coin">
@@ -33,10 +33,12 @@
               <span class="payment__available__current">2609</span>
             </div>
             <div class="payment__bet__range">
-              <input type="text" class="text__input" name="text__payment" id="text__payment" max="15000" value="10"
+              <input type="text" class="text__input text__input--bet" name="text__payment" id="text__payment"
+                     max="15000" value="10"
                      onchange="range__payment.value = text__payment.value"/>
-              <button type="button" class="payment__bet__button payment__bet__button--minus">
-                <svg class="payment__bet__icon payment__bet__icon--minus" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+              <button type="button" class="range__button range__button--minus">
+                <svg class="payment__bet__icon payment__bet__icon--minus" version="1.1"
+                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                      y="0px"
                      viewBox="0 0 341.333 341.333" style="enable-background:new 0 0 341.333 341.333;"
                      xml:space="preserve">
@@ -46,25 +48,27 @@
               <input type="range" class="range__input" name="range__payment" id="range__payment"
                      oninput="text__payment.value = range__payment.value" min="0" max="15000" value="10" step="1"
                      onchange="text__payment.value = range__payment.value">
-              <button type="button" class="payment__bet__button payment__bet__button--plus">
-                <svg class="payment__bet__icon payment__bet__icon--plus" viewBox="0 0 448 448" xmlns="http://www.w3.org/2000/svg">
-                  <path d="m272 184c-4.417969 0-8-3.582031-8-8v-176h-80v176c0 4.417969-3.582031 8-8 8h-176v80h176c4.417969 0 8 3.582031 8 8v176h80v-176c0-4.417969 3.582031-8 8-8h176v-80zm0 0"/>
+              <button type="button" class="range__button range__button--plus">
+                <svg class="payment__bet__icon payment__bet__icon--plus" viewBox="0 0 448 448"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="m272 184c-4.417969 0-8-3.582031-8-8v-176h-80v176c0 4.417969-3.582031 8-8 8h-176v80h176c4.417969 0 8 3.582031 8 8v176h80v-176c0-4.417969 3.582031-8 8-8h176v-80zm0 0"/>
                 </svg>
               </button>
             </div>
             <div class="payment__bet__manage">
               <ul class="payment__bet__options">
                 <li class="payment__bet__option">
-                  <button type="button">Min</button>
+                  <button type="button" class="form__button form__button--option">Min</button>
                 </li>
                 <li class="payment__bet__option">
-                  <button type="button">Max</button>
+                  <button type="button" class="form__button form__button--option">Max</button>
                 </li>
                 <li class="payment__bet__option">
-                  <button type="button">Bank</button>
+                  <button type="button" class="form__button form__button--option">Bank</button>
                 </li>
                 <li class="payment__bet__option">
-                  <button type="button">1/2 Bank</button>
+                  <button type="button" class="form__button form__button--option">1/2 Bank</button>
                 </li>
               </ul>
             </div>
@@ -72,13 +76,94 @@
               <p>Ваш входной взнос не может быть меньше суммы, с которой вы покинули данный стол. Нажмите кнопку ОК,
                 чтобы продолжить, или подождите, когда пройдет время ограничения.</p>
             </div>
+            <div class="payment__bet__quick">
+              <button type="button" class="form__button form__button--quick">
+                <span class="payment__quick__label">Быстрая посадка и автодокупка</span>
+                <i class="payment__quick__icon"></i>
+              </button>
+            </div>
           </div>
         </div>
         <div class="options">
-          <h2>table__payment</h2>
-          <p>Я хочу пользоваться функцией автоматической докупки и понимаю, что она будет автоматически пополнять мой
-            счет для обеспечения заданого номера стека.</p>
+          <div class="options__content">
+            <div class="options__landing">
+              <label class="options__item">
+                <input type="checkbox" class="options__check" name="options__landing" id="options__landing">
+                <span class="options__checkbox"></span>
+                <span class="options__title">Быстрая посадка</span>
+              </label>
+              <button type="button" class="form__button form__button--help">
+                <i>i</i>
+              </button>
+              <ul class="options__conditions">
+                <li class="options__condition">
+                  <label class="options__condition-label">
+                    <span class="options__condition-title">Автоматически ставить на стол:</span>
+                    <input type="text" class="text__input text__input--condition" name="options__auto__funds"
+                           id="options__auto__funds">
+                    <span>ББ</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="options__purchase">
+              <label class="options__item">
+                <input type="checkbox" class="options__check" name="options__purchase" id="options__purchase">
+                <span class="options__checkbox"></span>
+                <span class="options__title">Автодокупка</span>
+              </label>
+              <button type="button" class="form__button form__button--help">
+                <i>i</i>
+              </button>
+              <div class="options__warning">
+                <p>Я хочу пользоваться функцией автоматической докупки и понимаю, что она будет автоматически пополнять
+                  мой
+                  счет для обеспечения заданого номера стека.</p>
+              </div>
+              <ul class="options__conditions">
+                <li class="options__condition">
+                  <label class="options__condition-label">
+                    <span>Если у меня меньше:</span>
+                    <input type="text" class="text__input text__input--condition" name="options__auto__purchase__min"
+                           id="options__auto__purchase__min">
+                    <span>ББ</span>
+                  </label>
+                </li>
+                <li class="options__condition">
+                  <label class="options__condition-label">
+                    <span>Автоматически докупать до:</span>
+                    <input type="text" class="text__input text__input--condition" name="options__auto__purchase__max"
+                           id="options__auto__purchase__max">
+                    <span>ББ</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="options__save">
+              <label class="options__item">
+                <input type="checkbox" class="options__check" name="options__auto__save" id="options__auto__save">
+                <span class="options__checkbox"></span>
+                <span class="options__title options__title--save">Сохранить настройки после выхода из приложения</span>
+              </label>
+              <button type="button" class="form__button form__button--help">
+                <i>i</i>
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="form__actions">
+        <ul class="actions__list">
+          <li class="actions__item">
+            <button type="submit" class="form__button form__button--actions">Ok</button>
+          </li>
+          <li class="actions__item">
+            <button type="button" class="form__button form__button--actions">Cashier</button>
+          </li>
+          <li class="actions__item">
+            <button type="reset" class="form__button form__button--actions">Cancel</button>
+          </li>
+        </ul>
       </div>
     </form>
   </div>

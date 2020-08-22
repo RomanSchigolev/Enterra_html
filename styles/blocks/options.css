@@ -1,0 +1,122 @@
+.options {
+  padding-top: 40px;
+}
+
+.options__content {
+  border-left: 1px solid rgba(0, 0, 0, 0.8);
+  margin-top: 25px;
+  padding-left: 42px;
+}
+
+.options__landing,
+.options__purchase {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.options__save {
+  display: flex;
+  align-items: center;
+}
+
+.options__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.options__title {
+  font-size: var(--text-button);
+  max-width: 270px;
+}
+
+.options__title--save {
+  font-size: 20px;
+}
+
+.options__check {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.options__checkbox {
+  transition: box-shadow 0.3s ease;
+}
+
+.options__check:checked + .options__checkbox {
+  box-shadow: 0 0 7px 2px rgb(154 154 154);
+  background-image: url("../../icons/checked.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.options__check:focus + .options__checkbox {
+  box-shadow: 0 0 7px 2px rgb(154 154 154), 0 0 5px 2px rgb(194 32 38);
+}
+
+.options__check:disabled + .options__checkbox {
+  background-color: #727272;
+}
+
+.options__check:checked:disabled + .options__checkbox {
+  background-color: #727272;
+  box-shadow: none;
+}
+
+.options__checkbox {
+  width: 35px;
+  height: 35px;
+  background-color: #ffffffcf;
+  margin-right: 25px;
+  border-radius: 6px
+}
+
+.options__conditions {
+  margin-top: 15px;
+  margin-left: auto;
+}
+
+.options__condition-label {
+  display: flex;
+  align-items: center;
+  font-size: var(--text-label);
+  line-height: 1;
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.options__condition:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.options__condition-title {
+  max-width: 249px;
+}
+
+.text__input--condition {
+  width: 85px;
+  padding: 7px 10px;
+  margin: 0 10px;
+}
+
+.options__warning {
+  margin-top: 15px;
+}
+
+.actions__list {
+  display: flex;
+  justify-content: center;
+}
+
+.actions__item:not(:last-child) {
+  margin-right: 10px;
+}
